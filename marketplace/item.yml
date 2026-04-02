@@ -1,0 +1,24 @@
+info:
+  name: item
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{per}}/api/items"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "женя уже не маленькая",
+        "description": "женя маленькая в идеальном состоянии, все аксессуары в комплекте",
+        "price": 1000000,
+        "imageUrl": "https://example.com/iphone.jpg"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

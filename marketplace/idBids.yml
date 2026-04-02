@@ -1,0 +1,25 @@
+info:
+  name: idBids
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{per}}/api/items/:id/bids"
+  params:
+    - name: id
+      value: "1773299289966"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "amount": 1500000
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
